@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">DealerLeads.Web</h1>
+</div>
+
+@if (ViewBag.IsAuthenticatedUser == false)
+{
+    <h5>Please sign in.</h5>
+} else if (ViewBag.DealerLeadUser == null)
+{
+    <h5>Please register your account.</h5>
+
+    <form method="post" action="/Home/RegisterUser">
+        <input name="oid" style="display:none;" value="@ViewBag.Oid"/>
+        <button>Register</button>
+    </form>
+    
+} else
+{
+    <h5>Welcome</h5>
+}
+
