@@ -26,6 +26,7 @@ namespace DealerLead
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
 
+
         public ICollection<Vehicle> Vehicles { get; set; }
 
         [ScaffoldColumn(false)]
