@@ -28,6 +28,7 @@ namespace DealerLead.Web.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
+            //this.user = claims principal
             var user = this.User;
 
             ViewBag.isAuthenticatedUser = user.Identity.IsAuthenticated;
